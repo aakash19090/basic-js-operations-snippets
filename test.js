@@ -37,14 +37,7 @@ const TuringCalPoints = (arr) =>{
 //  ************* TURING BASEBALL GAME PROBLEM ENDS *************
 
 
-
-
 // ? Basic Array Operations
-
-// * 1) Find index of specific item in array ( 1st Occurence in array )
-// * 2) Find index of specific item in array ( Last Occurence in array )
-// * 2) Find index of specific item in array at all occurences ( At multiple indexes in array  )
-
 
 // // * 2) Find Element in array
 // // * 3) Find and Replace an item in Array at specific index
@@ -151,10 +144,87 @@ function elementsInArray(){
         {value: 400},
         {value: 300}   // 2nd Occurence
     ];
-    
     const foundElements = items.filter( item => item.value === 300 )
     console.log('All Items with value 300 is -> ', foundElements);
-
     return foundElements
 }
-elementsInArray()
+// elementsInArray()
+
+
+
+// * 6) Replacing an item in Array at specific index
+
+function replaceAtIndex(){
+    const items = [
+        {value: 100},
+        {value: 200},
+        {value: 300},   // 1st Occurence
+        {value: 400},
+        {value: 500}   // 2nd Occurence
+    ];
+    // ? First Find Index of Element in Array
+
+    const elemIndex = items.findIndex( item => item.value === 300)
+    items[elemIndex] = {value: 900}
+    console.log('300 replaced by 900 at Index 2 ->', items);
+}
+// replaceAtIndex()
+
+
+// * 7) Remove item in Array at first Index
+
+function removeAtFirstIndex(){
+    const items = [
+        {value: 100},
+        {value: 200},
+        {value: 300},   // 1st Occurence
+        {value: 400},
+        {value: 500}   // 2nd Occurence
+    ];
+
+    items.shift()
+    console.log('Removing 100 at first index', items)
+    return items
+}
+// removeAtFirstIndex()
+
+
+// * 8) Remove item in Array at Last Index
+
+function removeAtLastIndex(){
+    const items = [
+        {value: 100},
+        {value: 200},
+        {value: 300},   // 1st Occurence
+        {value: 400},
+        {value: 500}   // 2nd Occurence
+    ];
+
+    items.pop()
+    console.log('Removing 500 at last index', items)
+    return items
+}
+// removeAtLastIndex()
+
+
+// * 9) Remove item in Array at specific Index
+
+function removeAtIndex(){
+    const items = [
+        {value: 100},
+        {value: 200},
+        {value: 300},   // 1st Occurence
+        {value: 400},
+        {value: 500}   // 2nd Occurence
+    ];
+    // ? First Find Index of Element in Array
+
+    const elemIndex = items.findIndex( item => item.value === 300)
+    const removedItems = items.splice(elemIndex, 1) // ? To remove multiple count, pass the count number as 2nd argument
+    console.log('New array after removing 300 at index 2 is ->', items)
+
+    // Another method
+    const newItems = items.filter(item=> item.value !== 300)
+    console.log('Another method using Filter() for New array after removing 300 at index 2 is ->',newItems)
+}
+// removeAtIndex()
