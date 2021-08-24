@@ -4,7 +4,7 @@ var ops = ["5", "-2", "4", "C", "D", "9", "+", "+"]
 
 var pointsArr = []
 
-const TuringCalPoints = (arr) =>{
+var TuringCalPoints = (arr) =>{
     arr.map( (item,index) => {
         if(item === 'C'){
             pointsArr.pop()
