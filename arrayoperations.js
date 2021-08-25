@@ -348,8 +348,8 @@ function flattenNestedArray(){
     const flatArr1 = items1.flat()
     const flatArr2 = items2.flat(3) // ? Flattens 3 level deep
     
-    console.log(flatArr1)
-    console.log(flatArr2)
+    console.log('Flat array at 1 level',  flatArr1)
+    console.log('Flat array at 3 level', flatArr2)
 }   
 // flattenNestedArray()
 
@@ -360,6 +360,6 @@ function flattenNestedArray(){
 function extractItemsFromArray(){
     const items = [ 'Batman', 'Superman', 'Spiderman', 'Joker', 'Hulk' ];
     const splicedArray = items.splice(1,3)
-    console.log(splicedArray)
+    console.log('Spliced Array', splicedArray)
 }
 // extractItemsFromArray()
