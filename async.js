@@ -69,4 +69,4 @@ async function UPDATE_CUSTOMER(){
 
 
 }
-UPDATE_CUSTOMER()
+// UPDATE_CUSTOMER()
