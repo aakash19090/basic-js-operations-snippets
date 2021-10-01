@@ -93,6 +93,38 @@ function LUCKY_INT(arr){
 
 
 }
-console.log(LUCKY_INT(intArr)) 
+// console.log(LUCKY_INT(intArr)) 
 
 //  ************* TURING CODING CHALLENGE PROBLEM 2 ENDS *************
+
+let n = 9
+let ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+
+function sockMerchant(n, ar) {
+    // Write your code here
+    let pairsCount = 0
+    let checkedColors = []
+    for( let i = 0; i < ar.length ; i++ ){
+        let index = i
+        let item = ar[i]
+        
+
+        if(!checkedColors.includes(item)){
+            const filterArr = ar.filter( arItem => arItem === item )
+            if(filterArr.length > 1){
+                if(filterArr.length % 2 === 0){
+                    let pairFound = filterArr.length/2
+                    pairsCount += pairFound
+    
+                }else{
+                    let pairFound = (filterArr.length -1)/2
+                    pairsCount += pairFound
+                }
+            }
+            checkedColors.push(item)
+        }
+    }
+    console.log(pairsCount);
+    return pairsCount
+}
+// sockMerchant(n,ar)
