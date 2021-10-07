@@ -23,3 +23,27 @@
 // }
 
 // var user2 = new B('Ajay', 'ajay@gmail.com')
+
+
+// * DEBOUNCING
+
+// let counter = 0
+// const showData = (name) => {
+//     console.log("Fetching Data...", counter++);
+//     console.log(name)
+// }
+
+// const debouncedFunction = (func, delay) => {
+//     let timer
+//     return (...args) => {
+//         clearTimeout(timer)
+//         timer = setTimeout(() => { 
+//             func.apply(this,args) 
+//         }, 500)
+//     }
+// }
+
+
+// const getData = debouncedFunction(showData,500)
+
+// window.addEventListener('keyup', () =>  getData("Akash Sharma"))
